@@ -11,52 +11,65 @@
 
 body {
 	margin: 0;
+	padding: 0;
+	height: 100%;
 	font-family: "Inter", sans-serif;
 	background-color: var(--bg);
 
 	background-image: url(./img/react-logo-transparent.png);
-	background-size: 400px;
+	background-size: 25rem;
 	background-repeat: no-repeat;
-	background-position: 120% 100%;
+	background-position: 100ch 10vh;
 }
 
 .nav {
 	display: flex;
-	padding: 10px 20px;
+	overflow: hidden;
+	padding: 0.625rem 1.25rem;
 	align-items: center;
 	background-color: var(--fg);
 	box-shadow: 2px 5px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-	margin-right: 10px;
+	margin-right: 0.625rem;
+	width: 2rem;
 }
 
-.project-title,
 .main-title {
 	margin: 0;
-	color: var(--txt);
-	font-weight: bold;
-	font-size: x-large;
-}
-
-.main-title {
 	margin-right: auto;
 	color: #64dafb;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.app {
+	min-height: 100vh;
+	position: relative;
 }
 
 main {
 	color: var(--txt);
-	padding: 40px 80px;
+	width: min(90%, 70.5rem);
+	margin-inline: auto;
 }
+
 main > h1 {
-	font-size: 64px;
+	font-size: 4.5rem;
 	font-weight: 800;
 }
 
+@media (max-width: 530px) {
+	main > h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+}
+
 main > ul {
-	font-size: large;
-	letter-spacing: -0.5px;
+	font-size: 1.6rem;
+	letter-spacing: -0.03125rem;
 }
 
 main > ul > li::marker {
@@ -64,11 +77,11 @@ main > ul > li::marker {
 	font-size: 1.4rem;
 }
 
-footer {
-	position: fixed;
+.footer {
+	position: absolute;
 	bottom: 0;
 	width: 100%;
-	margin: 0;
+	height: 2rem;
 	color: var(--ftr);
 	text-align: center;
 }
@@ -78,18 +91,19 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-items: center;
+	font-size: 0.75rem;
 }
 
 .mode > * {
-	margin: 10px;
+	margin: 0.3rem;
 }
 
 /* The switch - the box around the slider */
 .switch {
 	position: relative;
 	display: inline-block;
-	width: 64px;
-	height: 35px;
+	width: 3rem;
+	height: 2rem;
 	border: 1px solid black;
 }
 
@@ -116,10 +130,10 @@ footer {
 .slider:before {
 	position: absolute;
 	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
+	height: 1.4rem;
+	width: 1.4rem;
+	left: 0.25rem;
+	bottom: 0.375em;
 	background-color: white;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
@@ -134,16 +148,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-	border-radius: 34px;
-}
-
-.slider.round:before {
-	border-radius: 50%;
+	-webkit-transform: translateX(0.9rem);
+	-ms-transform: translateX(0.9rem);
+	transform: translateX(0.9rem);
 }

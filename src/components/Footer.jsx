@@ -3,8 +3,8 @@ import logo from "../img/react-logo.png";
 
 export default function Nav() {
 	return (
-		<footer className="footer">
+		<div className="footer">
 			<p>Made with Bun & React</p>
-		</footer>
+		</div>
 	);
 }

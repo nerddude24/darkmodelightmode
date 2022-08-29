@@ -30,7 +30,7 @@ export default function App() {
 	}
 
 	return (
-		<div>
+		<div className="app">
 			<Nav handleToggleMode={handleToggleMode} mode={darkMode}></Nav>
 			<Main></Main>
 			<Footer></Footer>
